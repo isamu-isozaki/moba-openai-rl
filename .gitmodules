@@ -1,0 +1,3 @@
+[submodule "ai-server/tactic_game_gym"]
+	path = ai-server/tactic_game_gym
+	url = https://github.com/isamu-isozaki/tactic_game_gym.git
