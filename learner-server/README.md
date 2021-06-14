@@ -10,9 +10,9 @@ The data in /data/matches will replace the collect_rollout function by sampling 
 In the db add an entry to the bot table
 
 ### DB Functionalities
-    - Query n most recent/random data from the Steps table 
-    - Query n most high elo match files from the Steps table using also Bots and Matches table
-    - Add Bot entry to Bots table with 1000 elo
+- Query n most recent/random data from the Steps table 
+- Query n most high elo match files from the Steps table using also Bots and Matches table
+- Add Bot entry to Bots table with 1000 elo
 
 ## Steps to implement
 1. Make DB structure

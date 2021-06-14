@@ -10,9 +10,9 @@ In the db, have
 3. Step table containing file path to Match parent id, step number, and file path to the state, action, reward, next state file
 
 ### DB Functionalities
-    - Query 2n random models(prioritize new) to battle each other from the Bot table.
-    - Create a Match table entry on every fight with a folder 
-    - Every step, save to the Step table along with a file to the match folder
+- Query 2n random models(prioritize new) to battle each other from the Bot table.
+- Create a Match table entry on every fight with a folder 
+- Every step, save to the Step table along with a file to the match folder
 
 
 ## Steps to implement
