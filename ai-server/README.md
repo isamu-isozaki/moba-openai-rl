@@ -22,18 +22,17 @@ In the db, have
     - Step table
 
     X defined in app/model.py
-2. Define perliminary file structure/files
+2. Define perliminary file structure/files+function to fun game in a vid
     X Currently, made structure of 
-    - app/app.py selecting the bots and starting matches
-    - app/match.py working with running the match
+    - app/app.py start matches and selecting bots
+    - app/match.py working with running the match 
     - app/step.py doing the steps in the environment and saving
-3. Create 2 models which output random actions with np.randint
-4. Run with m parallel environments for each match using asyncio
-5. Make env restart once a game ends and just continue running
-6. Make them populate the DB and the file structure
-7. After 2000 steps, stop the match and Query 2n models again
-8. Play matches with those 2n models with m envs each. So, n*m envs are running now.
-
+3. Create 2 models which output random actions with np.randint X
+4. Run with m parallel environments for each match using threading(celery/redis) X
+5. Make env restart once a game ends and just continue running -> Already done
+6. Make them populate the DB and the file structure X
+7. After 5000 steps, stop the match and Query 2n models again X
+8. Visualize matched
 
 ## Future:
 Make it so that I can play against bots based on their elo
