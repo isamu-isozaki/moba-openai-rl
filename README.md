@@ -7,7 +7,7 @@ I just plan to have the following containers
 
 ai-server: server to run deployed models to fight against each other
 
-learner-server: server to train models given data from the ai-server
+learner-server: server to train models given data from the ai-server. Set the DOCKER to 0 to run the learner server as a container
 
 db: a mongodb database 
 

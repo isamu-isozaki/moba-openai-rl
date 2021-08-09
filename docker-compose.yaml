@@ -6,25 +6,47 @@ services:
         restart: unless-stopped
         volumes:
             - ./ai-server:/app
-            - ./ai-data:/data
         ports:
             - 5000:5000
+        command: python3 run.py
         depends_on:
             - db
-    learner-server:
-        build: ./learner-server
-        restart: unless-stopped
+            - celery-ai
+    # learner-server:
+    #     build: ./learner-server
+    #     restart: unless-stopped
+    #     volumes:
+    #         - ./learner-server:/app
+    #         - ./ai-data:/data
+    #     environment:
+    #         - IS_DOCKER=1
+    #         - DOCKER=0
+    #     ports:
+    #         - 5010:5010
+    #     depends_on:
+    #         - db
+    celery-ai:
+        build:
+            context: "./ai-server"
+        command: celery -A celery_worker worker --autoscale=10,4 --loglevel=info 
         volumes:
-            - ./learner-server:/app
+            - ./ai-server:/app
             - ./ai-data:/data
-        ports:
-            - 5010:5010
         depends_on:
-            - db
+            - redis
+        restart: unless-stopped
+    redis:
+        image: "redis:alpine"
+        hostname: redis
+        ports:
+          - "6379:6379"
     db:
         image: postgres
+        command: postgres -c 'max_connections=500'
         volumes:
             - ./data/db:/var/lib/postgresql/data
+        ports:
+            - "5433:5432"
         environment:
             - POSTGRES_DB=postgres
             - POSTGRES_USER=postgres_user

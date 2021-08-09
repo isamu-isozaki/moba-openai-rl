@@ -1,5 +1,12 @@
+models/
 model/
+data/
+logs/
 db/
+test_log/
+test_models/
+ai-data/*
+ai-data/
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]

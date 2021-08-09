@@ -1,12 +1,6 @@
-[submodule "ai-server/tactic_game_gym"]
-	path = ai-server/tactic_game_gym
-	url = https://github.com/isamu-isozaki/tactic_game_gym.git
 [submodule "learner-server/stable-baselines3"]
 	path = learner-server/stable-baselines3
 	url = https://github.com/isamu-isozaki/stable-baselines3.git
-[submodule "learner-server/tactic_game_gym"]
-	path = learner-server/tactic_game_gym
-	url = https://github.com/isamu-isozaki/tactic_game_gym.git
 [submodule "ai-server/stable-baselines3"]
 	path = ai-server/stable-baselines3
 	url = https://github.com/isamu-isozaki/stable-baselines3.git
