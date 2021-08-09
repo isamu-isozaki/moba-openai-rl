@@ -28,12 +28,13 @@ In the db add an entry to the bot table
     - app/data.py reponsible for getting the data for the models to train on
     - app/train.py train a model given data from data.py and parameters from grid.py
     - app/deploy.py deploy trained model to ai-server
-3. Wait until 10000 random file names are in Step Table using time.sleep
-4. Query 10000 random file names from Step table
-5. Implement collect_rollout_from_files and add the 10000 random files
-    - Implement method to read the state, action, reward from each file
-6. Try training with one model and see if it trains
-7. Test deploying+Save to db
-8. Train models with as many parameters as possible at once
-9. Test deploying+Save to db
+    - app/db_models.py holds sqlalchemy models
+3. Wait until 5000 random file names are in Step Table using time.sleep x
+4. Query 5000 random file names from Step table
+5. Implement collect_rollout_from_files and add the 5000 random files x
+    - Implement method to read the state, action, reward from each file x
+6. Try training with one model and see if it trains x
+7. Test deploying x
+8. Train models with as many parameters as possible at once. Do Grid search
+9. Save to db
 10. Keep circulating models for ever and keep repeating step 2
